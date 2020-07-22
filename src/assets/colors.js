@@ -1,3 +1,4 @@
+export const BackgroundLight = '#f2f2f2';
 export const Background = '#282a36';
 export const CurrentLine = '#44475a';
 export const Foreground = '#f8f8f2';

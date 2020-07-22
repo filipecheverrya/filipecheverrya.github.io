@@ -1,24 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import IconSun from '@assets/icons/sun';
 import IconMoon from '@assets/icons/moon';
 import IconFlag from '@assets/icons/flag';
 
-import {
-  Container,
-  IconWrapper,
-  ContainerIconSwitcher,
-  Circle,
-  Background
-} from './styles';
+import { Container, IconWrapper, ContainerIconSwitcher, Circle, Background } from './styles';
 
-function Switcher({ theme }) {
-  const [switchStatus, setSwitchStatus] = useState(false);
-
-  function switcher() {
+function Switcher({ theme, value, onClick }) {
+  function switcherIcon() {
     return (
       <ContainerIconSwitcher>
-        <Circle className={[switchStatus ? 'active' : '']} />
+        <Circle className={[value ? 'active' : '']} />
         <Background />
       </ContainerIconSwitcher>
     );
@@ -32,7 +24,7 @@ function Switcher({ theme }) {
             <IconWrapper size="small">
               <IconMoon color="white" />
             </IconWrapper>
-            {switcher()}
+            {switcherIcon()}
             <IconWrapper>
               <IconSun color="white" />
             </IconWrapper>
@@ -45,7 +37,7 @@ function Switcher({ theme }) {
             <IconWrapper size="large">
               <IconFlag country="brasil" />
             </IconWrapper>
-            {switcher()}
+            {switcherIcon()}
             <IconWrapper size="large">
               <IconFlag />
             </IconWrapper>
@@ -55,10 +47,7 @@ function Switcher({ theme }) {
   }
   
   return (
-    <Container
-      onClick={() => setSwitchStatus(!switchStatus)}
-      id={`switcher-${theme}`}
-    >
+    <Container onClick={onClick} id={`switcher-${theme}`}>
       {renderSwitcher()}
     </Container>
   );

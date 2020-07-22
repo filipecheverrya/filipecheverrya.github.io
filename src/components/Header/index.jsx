@@ -1,46 +1,43 @@
-import React from 'react';
-
-import useI18n from '@src/hooks/use-i18n'
-import IconPDF from '@assets/icons/pdf';
-import IconLinkedin from '@assets/icons/linkedin';
-import IconEmail from '@assets/icons/email';
+import React, { useContext } from 'react';
+import { useRouter } from 'next/router';
 
 import Switcher from '@components/Switcher';
+import SocialLinks from '@components/SocialLinks';
+import IconFlag from '@assets/icons/flag';
+import AppContext from '@src/context';
 
-import { Container, IconWrapper, IconContainer, SwitcherContainer } from './styles';
+import { Container, IconContainer, SwitcherContainer, LinkLanguage } from './styles';
 
 function Header() {
-  const i18n = useI18n();
-  const { t: headerT } = i18n;
+  const { state, dispatch } = useContext(AppContext);
+
+  const router = useRouter();
+  
+  function handleSwitcher() {
+    dispatch({
+      type: 'SET_COLOR',
+      theme: state.theme === 'dark' ? 'light' : 'dark',
+    });
+  }
+
+  function clickFlag() {
+    router.push(router.query.lng === 'pt' ? '/en' : '/pt');
+  }
 
   return (
     <Container>
       <IconContainer>
-        <IconWrapper
-          href="/files/pt.pdf"
-          title={headerT('header.titles.pdf')}
-          download
-        >
-          <IconPDF color="white" />
-        </IconWrapper>
-        <IconWrapper
-          href="https://www.linkedin.com/in/filipe-echeverrya-b3727a162"
-          target="_blank"
-          rel="noopener noreferrer"
-          title={headerT('header.titles.linkedin')}
-        >
-          <IconLinkedin color="white" />
-        </IconWrapper>
-        <IconWrapper
-          href="mailto:filipecheverrya@gmail.com"
-          title={headerT('header.titles.email')}
-        >
-          <IconEmail color="white" />
-        </IconWrapper>
+        <SocialLinks />
       </IconContainer>
       <SwitcherContainer>
-        <Switcher theme="color" />
-        <Switcher theme="language" />
+        <Switcher
+          theme="color"
+          value={state.theme === 'light'}
+          onClick={handleSwitcher}
+        />
+        <LinkLanguage onClick={clickFlag}>
+          <IconFlag country={router.query.lng === 'pt' ? 'eua' : 'brasil'} />
+        </LinkLanguage>
       </SwitcherContainer>
     </Container>
   );

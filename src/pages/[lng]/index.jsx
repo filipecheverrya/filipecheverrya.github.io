@@ -1,30 +1,33 @@
+import React from 'react';
 import Head from 'next/head';
 import useI18n from '../../hooks/use-i18n';
 import { languages, contentLanguageMap } from '../../lib/i18n';
 
 import Header from '@components/Header';
+import About from '@components/About';
+import Experience from '@components/Experience';
+import BottomNav from '@components/BottomNav';
+import { CurrentLine } from '@assets/colors';
 
 import { Body } from '@assets/utils';
 
 const Home = () => {
   const i18n = useI18n();
-  const { t } = i18n;
 
   return (
-    <div>
+    <>
       <Head>
         <meta httpEquiv="content-language" content={contentLanguageMap[i18n.activeLocale]} />
+        <meta name="theme-color" content={CurrentLine} />
         <title>Filipe Echeverrya</title>
       </Head>
       <Header />
       <Body>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quaerat ducimus officiis quisquam ut recusandae iste soluta suscipit 
-          eius amet, obcaecati excepturi quo nam?
-        </p>
+        <Experience />
+        <About />
+        <BottomNav />
       </Body>
-    </div>
+    </>
   )
 }
 

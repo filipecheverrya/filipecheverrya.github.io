@@ -1,9 +1,10 @@
 {
   "header": {
     "titles": {
-      "pdf": "Download do currículo em PDF",
-      "linkedin": "Link para Linkedin",
-      "email": "Link para Email"
+      "pdf": "curriculo",
+      "linkedin": "linkedin",
+      "email": "email",
+      "github": "github"
     }
   }
 }

@@ -1,18 +1,17 @@
-import { ThemeProvider } from 'styled-components';
-import { light, dark } from '../assets/themes';
+import React from 'react';
 import I18n from '../lib/i18n';
 import GlobalStyle from '../assets/global';
+import { AppProvider } from '@src/context';
 
-export default function MyApp({ Component, pageProps }) {
-  // TODO: verify in localStorage for current theme
+function Home({ Component, pageProps }) {
   return (
     <I18n lngDict={pageProps.lngDict} locale={pageProps.lng}>
-      <ThemeProvider theme={dark}>
-        <>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </>
-      </ThemeProvider>
+      <AppProvider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </AppProvider>
     </I18n>
   )
 }
+
+export default Home;
