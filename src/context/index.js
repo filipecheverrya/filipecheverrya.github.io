@@ -4,18 +4,11 @@ import { ThemeProvider } from 'styled-components';
 import { light, dark } from '@assets/themes';
 
 const initialState = {
-  i18n: 'pt',
   theme: 'dark',
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    
-    case 'SET_LANGUAGE':
-      return {
-        ...state,
-        i18n: action.language,
-      };
     
     case 'SET_COLOR':
       return {

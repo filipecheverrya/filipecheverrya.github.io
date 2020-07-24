@@ -13,6 +13,7 @@ import { Body } from '@assets/utils';
 
 const Home = () => {
   const i18n = useI18n();
+  const { t } = i18n;
 
   return (
     <>
@@ -23,8 +24,16 @@ const Home = () => {
       </Head>
       <Header />
       <Body>
-        <Experience />
-        <About />
+        <Experience
+          title={{
+            experience: t('title.stack'),
+            career: t('title.career'),
+          }}
+        />
+        <About
+          title={t('title.about')}
+          resume={t('about.resume', { returObject: true })}
+        />
         <BottomNav />
       </Body>
     </>

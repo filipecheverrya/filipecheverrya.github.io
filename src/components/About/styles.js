@@ -10,7 +10,6 @@ export const Paragraph = styled.p`
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  color: #fff;
   text-align: center;
 
   @media ${phone} {
