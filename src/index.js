@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { dark, light } from './assets/styles/theme';
+import GlobalStyle from './assets/styles/global';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import * as serviceWorker from './serviceWorker';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+import { ThemeProvider } from 'styled-components';
 
 const en = require('./locales/en.json');
 const pt = require('./locales/pt.json');
@@ -35,7 +38,10 @@ i18n
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={dark}>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
