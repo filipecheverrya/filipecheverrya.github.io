@@ -1,5 +1,10 @@
 {
   "home": {
-    "title": "Welcome to React and react-i18next"
+    "experience": {
+      "title": "Experience"
+    },
+    "career": {
+      "title": "Career"
+    }
   }
 }
