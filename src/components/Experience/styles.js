@@ -19,7 +19,7 @@ export const StackGrid = styled.div`
     }
   }
   
-  @media screen and (max-width: 769px) {
+  @media (max-width: 769px) {
     max-width: 460px;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 16px;
@@ -32,7 +32,7 @@ export const StackGrid = styled.div`
     }
   }
   
-  @media screen and (max-width: 475px) {
+  @media (max-width: 475px) {
     max-width: 320px;
     grid-row-gap: 48px;
   }

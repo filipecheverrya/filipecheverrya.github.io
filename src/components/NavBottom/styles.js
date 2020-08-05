@@ -10,4 +10,8 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
