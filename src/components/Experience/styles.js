@@ -13,10 +13,7 @@ export const StackGrid = styled.div`
   img {
     box-shadow: -2px 2px 12px rgba(0, 0, 0, .45);
     border-radius: 50%;
-    
-    &:nth-child(13) {
-      grid-column: 3;
-    }
+    width: 120px;
   }
   
   @media (max-width: 769px) {

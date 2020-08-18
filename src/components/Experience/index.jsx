@@ -5,7 +5,7 @@ import adonis from '../../assets/images/adonis.png';
 import cordova from '../../assets/images/cordova.png';
 import jquery from '../../assets/images/jquery.png';
 import mongodb from '../../assets/images/mongodb.png';
-import mysql from '../../assets/images/mysql.png';
+// import mysql from '../../assets/images/mysql.png';
 import node from '../../assets/images/node.png';
 import pug from '../../assets/images/pug.png';
 import react from '../../assets/images/react.png';
@@ -15,6 +15,10 @@ import styledComponents from '../../assets/images/styled-components.png';
 import typescript from '../../assets/images/typescript.png';
 import vue from '../../assets/images/vue.png';
 import yarn from '../../assets/images/yarn.png';
+import figma from '../../assets/images/figma.png';
+import nextjs from '../../assets/images/nextjs.png';
+import nuxtjs from '../../assets/images/nuxtjs.png';
+import firebase from '../../assets/images/firebase.png';
 
 import blueshift from '../../assets/images/blueshift.png';
 import melhorEnvio from '../../assets/images/melhor-envio.png';
@@ -33,7 +37,7 @@ function Experience() {
     { src: cordova, alt: 'Cordova' },
     { src: jquery, alt: 'jQuery' },
     { src: mongodb, alt: 'Mongodb' },
-    { src: mysql, alt: 'MySql' },
+    // { src: mysql, alt: 'MySql' },
     { src: node, alt: 'Node' },
     { src: pug, alt: 'Pug' },
     { src: react, alt: 'React' },
@@ -43,6 +47,10 @@ function Experience() {
     { src: typescript, alt: 'TypeScript' },
     { src: vue, alt: 'Vue' },
     { src: yarn, alt: 'Yarn' },
+    { src: figma, alt: 'Figma' },
+    { src: nextjs, alt: 'NextJS' },
+    { src: nuxtjs, alt: 'NuxtJS' },
+    { src: firebase, alt: 'Firebase' },
   ];
   
   const workArr = [
