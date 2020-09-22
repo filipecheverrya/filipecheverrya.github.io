@@ -23,6 +23,7 @@ import firebase from '../../assets/images/firebase.png';
 import blueshift from '../../assets/images/blueshift.png';
 import melhorEnvio from '../../assets/images/melhor-envio.png';
 import nodo from '../../assets/images/nodo.png';
+import deliverit from '../../assets/images/deliver-it.png';
 
 import Title from '../Title';
 
@@ -57,6 +58,7 @@ function Experience() {
     { src: blueshift, alt: 'Blueshift' },
     { src: melhorEnvio, alt: 'Melhor Envio' },
     { src: nodo, alt: 'Nodo' },
+    { src: deliverit, alt: 'Deliver IT' },
   ];
 
   return (

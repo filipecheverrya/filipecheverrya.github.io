@@ -5,6 +5,10 @@
     },
     "career": {
       "title": "Carreira"
+    },
+    "repositories": {
+      "title": "Repositorios",
+      "update": "Ultima atualizacao"
     }
   }
 }

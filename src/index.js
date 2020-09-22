@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App.jsx';
 import { AppProvider } from './appContext';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';

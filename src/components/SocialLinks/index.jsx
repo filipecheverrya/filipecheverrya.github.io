@@ -19,7 +19,12 @@ function SocialLinks() {
     <Container>
       {listOfLinks.map(link => (
         <Item key={link.label}>
-          <Link title={link.label} href={link.href}>
+          <Link
+            title={link.label}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={link.src} alt={link.label} />
           </Link>
         </Item>

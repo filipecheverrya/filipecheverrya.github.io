@@ -35,7 +35,7 @@ export const StackGrid = styled.div`
   }
   
   ${props => (props.center && css`
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     max-width: 410px;
   `)}
