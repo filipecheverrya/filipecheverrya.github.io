@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
   grid-gap: 24px;
   max-width: 800px;
   margin: 64px auto 0;
+
+  @media (max-width: 769px) {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 320px;
+  }
 `;
 
 export const Box = styled.div`
